@@ -1,1 +1,1 @@
-放入/MSParS_V2.0_single_2_newme/data/single-turn/task2/文件中
+放入/KGQA-CQG/data/single-turn/task2/文件中
