@@ -15,5 +15,5 @@ python translate.py -model available_models/demo-single-model-transformer1_step_
 python merge.py
 
 ## 评估
-cd /KGQA-CQG/code/generation/OpenNMT/tools/
+cd /KGQA-CQG/code/generation/OpenNMT/tools/ <br>
 python evaluate.py
