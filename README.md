@@ -1,5 +1,6 @@
-# KGQA-CQG
-clarification question generation for knowledge graph question answering
+# KGQA-CQG: clarification question generation for knowledge graph question answering
+
+cd code/generation/OpenNMT
 
 ## 数据预处理
 python preprocess.py -train_src ../../../data/single-turn/task2/src-train.txt -train_tgt ../../../data/single-turn/task2/tgt-train.txt -valid_src ../../../data/single-turn/task2/src-test.txt -valid_tgt ../../../data/single-turn/task2/tgt-test.txt -save_data ../../../data/single-turn/task2/demo -dynamic_dict -share_vocab
