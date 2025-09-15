@@ -395,13 +395,16 @@ class Translator(object):
 
         dec_out1 = dec_out1[batch_id] # 23,2,1,768
         dec_out1 = [t[0].squeeze(1) for t in dec_out1]  # 变成 (2, 768)
-        print([x.shape for x in dec_out1])
         dec_out1 = torch.stack(dec_out1, dim=1)      # 变成 (2, 23, 768)
 
         dec_out2 = dec_out2[batch_id] # 23,2,1,768
-        dec_out2 = [t[0].squeeze(1) for t in dec_out2]  # 变成 (2, 768)\
-        print([x.shape for x in dec_out2])
-        dec_out2 = torch.stack(dec_out2, dim=1)      # 变成 (2, 23, 768)
+        dec_out2 = [t[0].squeeze(1) for t in dec_out2]  # 变成 (2, 768)
+        dec_out2_fixed = []
+        for t in dec_out2:
+            if t.shape[0] == 1:
+                t = t.repeat(2,1)
+            dec_out2_fixed.append(t)
+        dec_out2 = torch.stack(dec_out2_fixed, dim=1)      # 变成 (2, 23, 768)
 
         # init_state_for_decoder = torch.tensor([(dec_out1[i]+dec_out2[i]).tolist() for i in [0,1]]).to('cuda')
         # init_state_for_decoder = init_state_for_decoder.permute(1,0,2)
