@@ -12,7 +12,7 @@ import string
 # tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
 
 file_prediction = '../final_output_single.txt'
-file_ground = '/home/dell/zjx/MSParS_V2.0_single_2/data/final_tgt_test.txt'
+file_ground = '../../../../data/final_tgt_test.txt'
 
 predict = []
 ground = []
