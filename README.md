@@ -2,7 +2,7 @@
 ## 环境配置
 ### 候选答案选择模块
 python3.8 <br>
-第三方库：./code/EmbedKGQA/requirements.txt
+第三方库：./code/EmbedKGQA/requirements.txt<br>
 下载预训练语言模型https://huggingface.co/hfl/chinese-roberta-wwm-ext-large，保存到./code/EmbedKGQA/roberta/中
 ### 澄清问题生成模块
 python3.7 <br>
