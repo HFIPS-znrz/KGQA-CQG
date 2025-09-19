@@ -19,10 +19,10 @@ kge start examples/config_corn.yaml <br>
 cd ./code/EmbedKGQA/KGQA/RoBERTa/, 运行python pruning_main.py 训练关系修剪模型, 生成的文件：./code/EmbedKGQA/KGQA/RoBERTa/checkpoints/pruning
 
 ### 3.训练
-python main.py --mode train --relation_dim 200 --do_batch_norm 1 --gpu 0 --freeze 1 --batch_size 32 --validate_every 10 --hops webqsp_half --lr 0.00002 --entdrop 0.0 --reldrop 0.0 --scoredrop 0.0 --decay 1.0 --model ComplEx --patience 20 --ls 0.05 --l3_reg 0.001 --nb_epochs 200 --outfile corn_out_complex
+python main.py --mode train --relation_dim 100 --do_batch_norm 1 --gpu 0 --freeze 1 --batch_size 32 --validate_every 10 --hops webqsp_half --lr 0.00002 --entdrop 0.0 --reldrop 0.0 --scoredrop 0.0 --decay 1.0 --model ComplEx --patience 20 --ls 0.05 --l3_reg 0.001 --nb_epochs 200 --outfile corn_out_complex
 
 ### 4.评估
-python main.py --mode eval --relation_dim 200 --do_batch_norm 1 --gpu 0 --validate_every 10 --model ComplEx --load_from best_score_model
+python main.py --mode eval --relation_dim 100 --do_batch_norm 1 --gpu 0 --validate_every 10 --model ComplEx --load_from corn_out_complex
 
 ## 澄清问题生成
 ### 1.数据预处理
